@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, KeyboardAvoidingView, TextInput, Platform, TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, View, KeyboardAvoidingView, TextInput, Platform } from 'react-native'
 import React from 'react'
 
 export default function LoginInputs() {
@@ -21,9 +21,7 @@ export default function LoginInputs() {
       <View style={styles.container}>
         <TextInput style={styles.input} placeholder="Password" secureTextEntry/>
       </View>
-      <TouchableOpacity style={styles.buttonContainer}>
-        <Text style={styles.signUp}>Sign Up</Text>
-      </TouchableOpacity>
+      
     </KeyboardAvoidingView>
   )
 }
@@ -48,16 +46,5 @@ const styles = StyleSheet.create({
         width: "90%",
         padding: 8,
     }, 
-    buttonContainer:{
-        alignItems: "center",
-        justifyContent: "center",
-        marginTop: 10,
-    },
-    signUp:{
-        fontSize: 18,
-        backgroundColor: "lightblue",
-        paddingVertical: 13,
-        paddingHorizontal: 30,
-        borderRadius: 20,
-    },
+    
 })
