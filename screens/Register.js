@@ -1,13 +1,19 @@
 import React from "react";
-import { View, StyleSheet, Text, ScrollView, Image,  TouchableOpacity } from "react-native";
+import {
+  View,
+  StyleSheet,
+  Text,
+  ScrollView,
+  Image,
+  TouchableOpacity,
+} from "react-native";
 
 import RegisterInputs from "../components/RegisterInputs";
 
-const Register = props => {
-    
-    const {navigation} = props;
+const Register = (props) => {
+  const { navigation } = props;
   return (
-    <ScrollView style={{ backgroundColor: "white" }}>
+    <ScrollView style={{ backgroundColor: "#EEEEEE" }}>
       <View style={styles.container}>
         <Image source={require("../assets/logo.png")} style={styles.image} />
         <Text style={styles.textTitle}>New Account</Text>
@@ -29,18 +35,18 @@ const Register = props => {
       </View>
     </ScrollView>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    paddingTop: 60,
+    paddingTop: 100,
   },
   image: {
-    width: 300,
-    height: 250,
+    width: 170,
+    height: 170,
     marginVertical: 10,
   },
   textTitle: {
@@ -49,35 +55,41 @@ const styles = StyleSheet.create({
     marginTop: 5,
     marginBottom: 5,
     fontWeight: "bold",
+    color: "#536162",
   },
   textBody: {
     fontFamily: "sans-serif",
     fontSize: 16,
+    color: "#6E7C7C",
+    fontWeight: "bold",
   },
-  buttonContainer:{
+  buttonContainer: {
     alignItems: "center",
     justifyContent: "center",
     marginTop: 10,
-},
-signUp:{
+  },
+  signUp: {
     fontSize: 18,
-    backgroundColor: "lightblue",
+    color: "white",
+    fontWeight: "bold",
+    backgroundColor: "#5FD068",
     paddingVertical: 13,
     paddingHorizontal: 30,
     borderRadius: 20,
-},
-login:{ 
+    overflow: "hidden",
+  },
+  login: {
     alignItems: "center",
-    marginTop: 20,
+    marginTop: 25,
     fontSize: 20,
-    paddingHorizontal : 10,
-},
-loginLink:{
+    paddingHorizontal: 10,
+  },
+  loginLink: {
     fontWeight: "bold",
-},
-link:{
-    color: "lightblue"
-},
+  },
+  link: {
+    color: "#5FD068",
+  },
 });
 
-export default Register
+export default Register;
